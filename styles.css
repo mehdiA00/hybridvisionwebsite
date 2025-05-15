@@ -205,4 +205,56 @@ h1, h2 {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+.video-grid {
+  padding: 100px 20px 80px;
+  text-align: center;
+}
+
+.video-grid h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2em;
+  margin-bottom: 1.5em;
+  color: #f5d88b;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.video-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(255, 215, 100, 0.3);
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.9) contrast(1.1) saturate(1.1) sepia(0.1);
+  transition: filter 0.3s ease;
+}
+
+.video-card:hover img {
+  filter: brightness(1.1) contrast(1.2) saturate(1.2);
+}
+
+.video-title {
+  padding: 1em;
+  font-size: 1em;
+  color: #e0c17b;
+  font-weight: 600;
+  background: #0f0f0f;
+}
 
